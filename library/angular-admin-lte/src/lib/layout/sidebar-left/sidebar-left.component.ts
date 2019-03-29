@@ -31,6 +31,7 @@ export interface Item {
   parentId: number;
   label: string;
   route?: string;
+  exact?: boolean;
   iconClasses?: string;
   children?: Array<Item>;
   isActive?: boolean;
@@ -304,6 +305,8 @@ export class SidebarLeftComponent implements OnInit, AfterViewInit, OnDestroy {
   private findItemsByUrl(url: string, items: Items, returnItems: Items = []): Items {
     items.forEach((item: Item) => {
       if (item.route === url) {
+        returnItems.push(item);
+      } else if (!item.exact && url.indexOf(item.route) > -1) {
         returnItems.push(item);
       } else if (item.children) {
         this.findItemsByUrl(url, item.children, returnItems);
