@@ -3,7 +3,10 @@
 
 # angular-admin-lte
 
-Admin-lte implementation for Angular 4+
+Admin-lte implementation for Angular 8
+
+## Built package
+[angular-admin-lte-lib](https://github.com/MacPherson/angular-admin-lte-lib)
 
 ## Doc & Demo
 [https://mledour.github.io/angular-admin-lte/branches/master](https://mledour.github.io/angular-admin-lte/branches/master)
